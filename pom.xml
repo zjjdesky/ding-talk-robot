@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.jjzhou</groupId>
+    <artifactId>ding-talk-robot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>ding-talk-robot</name>
+    <description>进击的Cser群通知钉钉机器人</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <guava.version>23.0</guava.version>
+        <druid-spring-boot-starter.version>1.1.17</druid-spring-boot-starter.version>
+        <springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
+        <mybatis-spring-boot-starter.version>2.1.4</mybatis-spring-boot-starter.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <!-- commons -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${commons-collections.version}</version>
+        </dependency>
+
+        <!-- swagger -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${springfox-boot-starter.version}</version>
+        </dependency>
+
+        <!-- druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid-spring-boot-starter.version}</version>
+        </dependency>
+
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis-spring-boot-starter.version}</version>
+        </dependency>
+
+        <!-- dingtalk -->
+        <dependency>
+            <groupId>com.dingtalk.api</groupId>
+            <artifactId>dingtalk</artifactId>
+            <version>3.0.12</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/taobao-sdk-java-auto_1479188381469-20201126.jar</systemPath>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
+            </plugin>
+        </plugins>
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>lib</directory>-->
+<!--                <targetPath>/BOOT-INF/lib/</targetPath>-->
+<!--                <includes>-->
+<!--                    <include>**/*.jar</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
+<!--        </resources>-->
+    </build>
+
+</project>

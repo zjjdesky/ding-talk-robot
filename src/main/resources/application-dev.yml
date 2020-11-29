@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+logback:
+  logDir: /Users/chenyangyuren/IdeaProjects/my-git/ding-talk-robot/logs
+
+robot:
+  link:
+    first: https://oapi.dingtalk.com/robot/send?access_token=562287bd8fb3b8c557afac1088dc978dec22aaec970530032886c7251b07904c
