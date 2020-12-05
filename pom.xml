@@ -97,6 +97,18 @@
             <systemPath>${project.basedir}/src/main/resources/lib/taobao-sdk-java-auto_1479188381469-20201126.jar</systemPath>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
